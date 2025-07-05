@@ -59,10 +59,7 @@ body {
   border-color: #d4af37 !important;
 }
 
-/* Hero Background */
-.hero-bg * {
-  border: 2px solid red !important;
-}
+
 
 .hero-bg {
   background: linear-gradient(135deg, #1c0f0f 0%, #000000a5 100%);
