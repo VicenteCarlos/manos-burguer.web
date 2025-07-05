@@ -1,0 +1,410 @@
+:root {
+    --white-smoke: #f5f5f5;
+    --mustard: #ffdd44;
+    --gold-metallic: #d4af37;
+    --raisin-black: #000000;
+    --licorice: #1c0f0f;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #1c0f0f !important;
+    color: #f5f5f5;
+    overflow-x: hidden;
+    line-height: 1.6;
+}
+
+.font-bebas {
+    font-family: 'Bebas Neue', cursive;
+}
+
+/* Color Classes - REMOVENDO TODOS OS CINZAS */
+.bg-licorice { background-color: #1c0f0f !important; }
+.bg-raisin { background-color: #000000a5 !important; }
+.bg-mustard { background-color: #ffdd44 !important; }
+.bg-gold { background-color: #d4af37 !important; }
+.text-mustard { color: #ffdd44 !important; }
+.text-gold { color: #d4af37 !important; }
+.text-smoke { color: #f5f5f5 !important; }
+.border-mustard { border-color: #ffdd44 !important; }
+.border-gold { border-color: #d4af37 !important; }
+
+/* Hero Background */
+.hero-bg {
+    background: linear-gradient(135deg, #1c0f0f 0%, #000000a5 100%);
+    position: relative;
+}
+
+.hero-bg::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(circle at 20% 50%, rgba(255, 221, 68, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 20%, rgba(212, 175, 55, 0.1) 0%, transparent 50%);
+    opacity: 0.5;
+}
+
+/* Buttons */
+.btn-primary {
+    background: linear-gradient(45deg, #ffdd44, #d4af37);
+    color: #1c0f0f;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 15px rgba(255, 221, 68, 0.3);
+    border: none;
+    cursor: pointer;
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-primary:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(255, 221, 68, 0.4);
+}
+
+.btn-primary:focus {
+    outline: 2px solid #ffdd44;
+    outline-offset: 2px;
+}
+
+/* Card Effects */
+.card-hover {
+    transition: all 0.3s ease;
+}
+
+.card-hover:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 25px rgba(255, 221, 68, 0.2);
+}
+
+/* Animations */
+.floating {
+    animation: floating 3s ease-in-out infinite;
+}
+
+@keyframes floating {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-10px); }
+}
+
+.pulse-glow {
+    animation: pulse-glow 2s ease-in-out infinite alternate;
+}
+
+@keyframes pulse-glow {
+    from { box-shadow: 0 0 20px rgba(255, 221, 68, 0.3); }
+    to { box-shadow: 0 0 30px rgba(255, 221, 68, 0.6); }
+}
+
+/* Navbar */
+.navbar-scroll {
+    backdrop-filter: blur(10px);
+    background: rgba(28, 15, 15, 0.95) !important;
+    box-shadow: 0 2px 20px rgba(255, 221, 68, 0.1);
+}
+
+/* Navigation */
+nav ul {
+    list-style: none;
+}
+
+nav a {
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+nav a:focus {
+    outline: 2px solid #ffdd44;
+    outline-offset: 2px;
+}
+
+/* Cards - SUBSTITUINDO CINZA POR PRETO */
+.stats-card {
+    background: linear-gradient(135deg, #1c0f0f 0%, rgba(28, 15, 15, 0.8) 100%);
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.stats-card:hover {
+    border-color: #ffdd44;
+    background: linear-gradient(135deg, #1c0f0f 0%, rgba(255, 221, 68, 0.1) 100%);
+    transform: translateY(-2px);
+}
+
+.menu-card {
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+}
+
+.menu-card:hover {
+    border-color: #ffdd44;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 221, 68, 0.2);
+}
+
+.process-card {
+    transition: all 0.3s ease;
+}
+
+.process-card:hover {
+    transform: translateY(-2px);
+}
+
+.testimonial-card {
+    background: #1c0f0f !important; /* MUDANDO DE CINZA PARA PRETO */
+    border-radius: 1rem;
+    padding: 2rem;
+    transition: all 0.3s ease;
+    border: 1px solid #000000;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(255, 221, 68, 0.2);
+    border-color: #ffdd44;
+}
+
+/* Gallery */
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 0.75rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: translateY(-2px);
+}
+
+.gallery-item:focus {
+    outline: 2px solid #ffdd44;
+    outline-offset: 2px;
+}
+
+.gallery-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(28, 15, 15, 0.8); /* MUDANDO DE CINZA PARA PRETO */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffdd44;
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    opacity: 1;
+}
+
+/* Form Inputs */
+input, textarea {
+    transition: all 0.3s ease;
+}
+
+input:focus, textarea:focus {
+    box-shadow: 0 0 0 3px rgba(255, 221, 68, 0.2);
+}
+
+input:invalid, textarea:invalid {
+    border-color: #ff4444;
+}
+
+/* Links */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #ffdd44;
+}
+
+a:focus {
+    outline: 2px solid #ffdd44;
+    outline-offset: 2px;
+}
+
+/* Screen Reader Only */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}
+
+/* Skip Link */
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 6px;
+    background: #ffdd44;
+    color: #1c0f0f;
+    padding: 8px;
+    text-decoration: none;
+    z-index: 1000;
+    border-radius: 4px;
+}
+
+.skip-link:focus {
+    top: 6px;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .floating {
+        animation: none;
+    }
+    
+    .hero-bg::before {
+        opacity: 0.3;
+    }
+    
+    .card-hover:hover,
+    .stats-card:hover,
+    .menu-card:hover,
+    .process-card:hover,
+    .testimonial-card:hover,
+    .gallery-item:hover {
+        transform: none;
+    }
+    
+    /* Increase touch targets on mobile */
+    button, a {
+        min-height: 44px;
+        min-width: 44px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Reduce padding on very small screens */
+    .py-24 {
+        padding-top: 3rem !important;
+        padding-bottom: 3rem !important;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .bg-licorice { background-color: #000000 !important; }
+    .bg-raisin { background-color: #1a1a1a !important; } /* MUDANDO PARA PRETO MAIS ESCURO */
+    .text-smoke { color: #ffffff !important; }
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+    .floating,
+    .pulse-glow {
+        animation: none;
+    }
+    
+    * {
+        transition: none !important;
+    }
+}
+
+/* AOS Animation Adjustments */
+[data-aos] {
+    pointer-events: none;
+}
+
+[data-aos].aos-animate {
+    pointer-events: auto;
+}
+
+/* Smooth Scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html {
+        scroll-behavior: auto;
+    }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #1c0f0f;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #ffdd44;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #d4af37;
+}
+
+/* Print Styles */
+@media print {
+    .floating,
+    .pulse-glow,
+    nav,
+    .gallery-overlay {
+        display: none !important;
+    }
+    
+    body {
+        background: white !important;
+        color: black !important;
+    }
+    
+    .text-smoke,
+    .text-mustard,
+    .text-gold {
+        color: black !important;
+    }
+}
+
+/* Garantindo que não há cinza em lugar nenhum */
+.bg-gray-100,
+.bg-gray-200,
+.bg-gray-300,
+.bg-gray-400,
+.bg-gray-500,
+.bg-gray-600,
+.bg-gray-700,
+.bg-gray-800,
+.bg-gray-900 {
+    background-color: #1c0f0f !important;
+}
+
+.text-gray-100,
+.text-gray-200,
+.text-gray-300,
+.text-gray-400,
+.text-gray-500,
+.text-gray-600,
+.text-gray-700,
+.text-gray-800,
+.text-gray-900 {
+    color: #f5f5f5 !important;
+}
