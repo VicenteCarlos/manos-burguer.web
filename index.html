@@ -3,1041 +3,435 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Manos Burger - Os melhores hambúrgueres artesanais da cidade. Ingredientes frescos, preparo artesanal e sabores únicos."
+    <title>Manos Burger - O Melhor Hambúrguer da Cidade</title>
+    <link rel="icon" type="image/png" href="assets/icons8-hambúrguer-32.png" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap"
+      rel="stylesheet"
     />
-    <meta
-      name="keywords"
-      content="hambúrguer, burger, artesanal, delivery, São Paulo, comida"
-    />
-    <title>Manos Burger - Os Melhores Hambúrgueres da Cidade</title>
-
-    <!-- Tailwind CSS -->
-    <script src="https://cdn.tailwindcss.com"></script>
-
-    <!-- AOS Library -->
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
-
-    <!-- Google Fonts -->
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Inter:wght@300;400;500;600;700&display=swap"
-      rel="stylesheet"
-    />
-
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-
-    <link rel="icon" href="./assets/burger-favicon.png" type="image/x-icon" />
-
-    <!-- Custom CSS -->
     <link rel="stylesheet" href="styles.css" />
   </head>
-  <body class="bg-licorice">
-    <!-- Header Principal -->
-    <header>
-      <nav
-        id="navbar"
-        class="sticky w-full transition-all duration-300 py-4 bg-licorice"
-        role="navigation"
-        aria-label="Menu principal"
-      >
-        <div class="container w-full mx-auto px-6 flex justify-between items-center">
-          <div class="text-2xl font-bebas text-mustard">
-            <i class="fas fa-hamburger mr-2" aria-hidden="true"></i>
-            <span>Manos Burger</span>
-          </div>
-
-          <ul class="hidden md:flex space-x-8 list-none">
-            <li>
-              <a
-                href="#home"
-                class="text-smoke hover:text-mustard transition-colors"
-                >Início</a
-              >
-            </li>
-            <li>
-              <a
-                href="#about"
-                class="text-smoke hover:text-mustard transition-colors"
-                >Sobre</a
-              >
-            </li>
-            <li>
-              <a
-                href="#process"
-                class="text-smoke hover:text-mustard transition-colors"
-                >Processo</a
-              >
-            </li>
-            <li>
-              <a
-                href="#menu"
-                class="text-smoke hover:text-mustard transition-colors"
-                >Cardápio</a
-              >
-            </li>
-            <li>
-              <a
-                href="#gallery"
-                class="text-smoke hover:text-mustard transition-colors"
-                >Galeria</a
-              >
-            </li>
-            <li>
-              <a
-                href="#testimonials"
-                class="text-smoke hover:text-mustard transition-colors"
-                >Avaliações</a
-              >
-            </li>
-            <li>
-              <a
-                href="#contact"
-                class="text-smoke hover:text-mustard transition-colors"
-                >Contato</a
-              >
-            </li>
+  <body>
+    <header class="header">
+      <div class="container">
+        <a href="#" class="logo" data-aos="fade-right">
+          <img
+            src="assets/manos-logo.png"
+            alt="Manos Burger Logo"
+            width="40"
+            height="40"
+          />
+          MANOS BURGER
+        </a>
+        <nav class="nav" data-aos="fade-left">
+          <ul>
+            <li><a href="#inicio">Início</a></li>
+            <li><a href="#sobre">Sobre</a></li>
+            <li><a href="#processo">Processo</a></li>
+            <li><a href="#cardapio">Cardápio</a></li>
+            <li><a href="#avaliacoes">Avaliações</a></li>
+            <li><a href="#contato">Contato</a></li>
           </ul>
-
-          <button
-            id="mobile-menu"
-            class="md:hidden text-mustard text-2xl"
-            aria-label="Abrir menu mobile"
-            aria-expanded="false"
-          >
-            <i class="fas fa-bars" aria-hidden="true"></i>
-          </button>
-        </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobile-nav" class="md:hidden bg-raisin hidden" role="menu">
-          <ul class="px-6 py-4 space-y-4 list-none">
-            <li>
-              <a
-                href="#home"
-                class="block text-smoke hover:text-mustard transition-colors"
-                role="menuitem"
-                >Início</a
-              >
-            </li>
-            <li>
-              <a
-                href="#about"
-                class="block text-smoke hover:text-mustard transition-colors"
-                role="menuitem"
-                >Sobre</a
-              >
-            </li>
-            <li>
-              <a
-                href="#process"
-                class="block text-smoke hover:text-mustard transition-colors"
-                role="menuitem"
-                >Processo</a
-              >
-            </li>
-            <li>
-              <a
-                href="#menu"
-                class="block text-smoke hover:text-mustard transition-colors"
-                role="menuitem"
-                >Cardápio</a
-              >
-            </li>
-            <li>
-              <a
-                href="#gallery"
-                class="block text-smoke hover:text-mustard transition-colors"
-                role="menuitem"
-                >Galeria</a
-              >
-            </li>
-            <li>
-              <a
-                href="#testimonials"
-                class="block text-smoke hover:text-mustard transition-colors"
-                role="menuitem"
-                >Avaliações</a
-              >
-            </li>
-            <li>
-              <a
-                href="#contact"
-                class="block text-smoke hover:text-mustard transition-colors"
-                role="menuitem"
-                >Contato</a
-              >
-            </li>
-          </ul>
-        </div>
-      </nav>
+        </nav>
+      </div>
     </header>
 
-    <!-- Main Content -->
     <main>
-      <!-- Hero Section -->
-      <section
-        id="home"
-        class="hero-bg min-h-screen flex items-center relative py-24"
-      >
-        <div
-          class="container mx-auto px-6 grid md:grid-cols-2 gap-12 items-center relative z-10"
-        >
-          <div data-aos="fade-right" data-aos-duration="800" class="mt-10">
-            <h1
-              class="font-bebas text-4xl sm:text-5xl md:text-8xl text-mustard mb-6 leading-tight"
-            >
-              O Melhor<br />
-              <span class="text-gold">Hambúrguer</span><br />
-              da Cidade
-            </h1>
-            <p class="text-base sm:text-lg text-smoke mb-8 leading-relaxed">
+      <section id="inicio" class="hero">
+        <div class="container">
+          <div class="hero-content" data-aos="fade-right" data-aos-delay="200">
+            <h1>O MELHOR<br />HAMBÚRGUER<br />DA CIDADE</h1>
+            <p>
               Sabores únicos, ingredientes frescos e a experiência mais incrível
               em cada mordida. Venha descobrir por que somos a hamburgueria
               favorita da cidade!
             </p>
-            <div class="flex flex-col sm:flex-row gap-4">
+            <div class="hero-buttons">
               <a
                 href="https://instadelivery.com.br/manosburguer5?fbclid=PAZXh0bgNhZW0CMTEAAaedhBnny5WwtBSWWgV2wGCK7Sx7Qw3QokySqC5bFikUdL3qQX4QoiDuz9oNhA_aem_SdB97BuFCh6CY3e5t7hzmw"
+                class="btn primary"
                 target="_blank"
-                class="btn-primary px-8 py-4 rounded-full text-lg"
-                aria-label="Fazer pedido agora"
+                >Peça Agora</a
               >
-                <i class="fas fa-utensils mr-2" aria-hidden="true"></i>
-                Peça Agora
-              </a>
-              <a
-                href="https://instadelivery.com.br/manosburguer5?fbclid=PAZXh0bgNhZW0CMTEAAaedhBnny5WwtBSWWgV2wGCK7Sx7Qw3QokySqC5bFikUdL3qQX4QoiDuz9oNhA_aem_SdB97BuFCh6CY3e5t7hzmw"
-                target="_blank"
-                class="border-2 border-mustard text-mustard px-8 py-4 rounded-full text-lg hover:bg-mustard hover:text-licorice transition-all text-center"
-              >
-                <i class="fas fa-book-open mr-2" aria-hidden="true"></i>
-                Ver Cardápio
-              </a>
+              <a href="#cardapio" class="btn secondary">Ver Cardápio</a>
             </div>
           </div>
-
-          <div
-            data-aos="fade-left"
-            data-aos-duration="800"
-            data-aos-delay="200"
-            class="relative"
-          >
-            <div class="floating">
-              <div class="w-full max-w-xs sm:max-w-sm md:max-w-md lg:max-w-lg xl:max-w-xl aspect-square mx-auto relative overflow-hidden">
-                <div
-                  class="absolute inset-0 bg-gradient-to-br from-mustard to-gold rounded-full opacity-20 pulse-glow"
-                ></div>
-                <img
-                  src="./assets/oklahoma.jpeg"
-                  alt="Hambúrguer Manos Burger - Hambúrguer artesanal com ingredientes frescos"
-                  class="w-full h-full object-cover rounded-full border-4 border-mustard"
-                />
-              </div>
-            </div>
-
-            <!-- Floating Elements -->
-            <div
-              class="absolute -top-5 -left-5 text-mustard text-3xl floating"
-              style="animation-delay: -1s"
-              aria-hidden="true"
-            >
-              <i class="fas fa-star"></i>
-            </div>
-            <div
-              class="absolute -bottom-5 -right-5 text-gold text-2xl floating"
-              style="animation-delay: -2s"
-              aria-hidden="true"
-            >
-              <i class="fas fa-fire"></i>
-            </div>
+          <div class="hero-image" data-aos="fade-left" data-aos-delay="400">
+            <img
+              src="assets/oklahoma.jpeg"
+              alt="Hambúrguer Oklahoma  "
+              class="circular-image"
+            />
           </div>
         </div>
       </section>
 
-      <!-- About Section -->
-      <section id="about" class="py-24 bg-raisin">
-        <div class="container mx-auto px-6">
-          <header class="text-center mb-16" data-aos="fade-up">
-            <h2 class="font-bebas text-5xl text-mustard mb-4">
-              Nossa História
-            </h2>
-            <p class="text-xl text-smoke max-w-3xl mx-auto">
-              Desde 2015, criamos hambúrgueres artesanais com paixão e dedicação
-            </p>
-          </header>
+      <section id="sobre" class="about">
+        <div class="container">
+          <h2 data-aos="fade-up">NOSSA HISTÓRIA</h2>
+          <p class="subtitle" data-aos="fade-up" data-aos-delay="200">
+            Desde 2015, criamos hambúrgueres artesanais com paixão e dedicação
+          </p>
 
-          <div class="grid md:grid-cols-3 gap-8 mb-20">
-            <article
-              class="text-center"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div
-                class="w-16 h-16 bg-mustard rounded-full flex items-center justify-center mx-auto mb-4"
-              >
-                <i
-                  class="fas fa-leaf text-licorice text-xl"
-                  aria-hidden="true"
-                ></i>
-              </div>
-              <h3 class="font-bebas text-2xl text-gold mb-3">
-                Ingredientes Frescos
-              </h3>
-              <p class="text-smoke">
+          <div class="features">
+            <div class="feature" data-aos="fade-up" data-aos-delay="200">
+              <div class="feature-icon">🌿</div>
+              <h3>INGREDIENTES FRESCOS</h3>
+              <p>
                 Selecionamos apenas os melhores ingredientes, sempre frescos e
                 de qualidade premium.
               </p>
-            </article>
-
-            <article
-              class="text-center"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div
-                class="w-16 h-16 bg-mustard rounded-full flex items-center justify-center mx-auto mb-4"
-              >
-                <i
-                  class="fas fa-fire text-licorice text-xl"
-                  aria-hidden="true"
-                ></i>
-              </div>
-              <h3 class="font-bebas text-2xl text-gold mb-3">
-                Preparo Artesanal
-              </h3>
-              <p class="text-smoke">
+            </div>
+            <div class="feature" data-aos="fade-up" data-aos-delay="400">
+              <div class="feature-icon">👨‍🍳</div>
+              <h3>PREPARO ARTESANAL</h3>
+              <p>
                 Cada hambúrguer é preparado na hora, com técnicas artesanais e
                 muito amor.
               </p>
-            </article>
-
-            <article
-              class="text-center"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div
-                class="w-16 h-16 bg-mustard rounded-full flex items-center justify-center mx-auto mb-4"
-              >
-                <i
-                  class="fas fa-heart text-licorice text-xl"
-                  aria-hidden="true"
-                ></i>
-              </div>
-              <h3 class="font-bebas text-2xl text-gold mb-3">Feito com Amor</h3>
-              <p class="text-smoke">
+            </div>
+            <div class="feature" data-aos="fade-up" data-aos-delay="600">
+              <div class="feature-icon">❤️</div>
+              <h3>FEITO COM AMOR</h3>
+              <p>
                 Nossa paixão pela gastronomia se reflete em cada detalhe dos
                 nossos pratos.
               </p>
-            </article>
+            </div>
           </div>
 
-          <!-- Story Section -->
-          <div class="grid md:grid-cols-2 gap-12 items-center">
-            <div data-aos="fade-right">
-              <img
-                src="./assets/smash x-tudo.jpeg"
-                alt="Fundadores da Manos Burger preparando hambúrgueres artesanais"
-                class="rounded-2xl shadow-lg"
-              />
+          <div class="stats">
+            <div class="stat" data-aos="fade-up" data-aos-delay="200">
+              <h3>1+</h3>
+              <p>Anos</p>
             </div>
-            <article data-aos="fade-left">
-              <h3 class="font-bebas text-3xl text-mustard mb-4">
-                Uma Paixão que Virou Tradição
-              </h3>
-              <p class="text-smoke mb-4 leading-relaxed">
-                Tudo começou em 2025, quando nós que somos apaixonados por
-                gastronomia decidimos criar algo especial. Com receitas
-                familiares e muito amor pela arte culinária, nasceu o Manos Burger.
-              </p>
-              <p class="text-smoke mb-6 leading-relaxed">
-                Hoje, somos reconhecidos como a melhor hamburgueria da cidade,
-                mantendo sempre nossos valores de qualidade, frescor e
-                atendimento excepcional.
-              </p>
-              <div class="flex items-center space-x-8">
-                <div class="text-center">
-                  <div class="text-2xl font-bebas text-mustard">8+</div>
-                  <p class="text-smoke text-sm">Anos</p>
-                </div>
-                <div class="text-center">
-                  <div class="text-2xl font-bebas text-mustard">50k+</div>
-                  <p class="text-smoke text-sm">Hambúrgueres</p>
-                </div>
-                <div class="text-center">
-                  <div class="text-2xl font-bebas text-mustard">1000+</div>
-                  <p class="text-smoke text-sm">Clientes</p>
-                </div>
-              </div>
-            </article>
+            <div class="stat" data-aos="fade-up" data-aos-delay="400">
+              <h3>50k+</h3>
+              <p>Hambúrgueres</p>
+            </div>
+            <div class="stat" data-aos="fade-up" data-aos-delay="600">
+              <h3>1000+</h3>
+              <p>Clientes</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Process Section -->
-      <section id="process" class="py-24 bg-licorice">
-        <div class="container mx-auto px-6">
-          <header class="text-center mb-16" data-aos="fade-up">
-            <h2 class="font-bebas text-5xl text-mustard mb-4">
-              Nosso Processo
-            </h2>
-            <p class="text-xl text-smoke">
-              Do ingrediente ao prato: conheça nosso método artesanal
-            </p>
-          </header>
+      <section id="processo" class="process">
+        <div class="container">
+          <h2 data-aos="fade-up">NOSSO PROCESSO</h2>
+          <p class="subtitle" data-aos="fade-up" data-aos-delay="200">
+            Do ingrediente ao prato: conheça nosso método artesanal
+          </p>
 
-          <div class="grid md:grid-cols-4 gap-8">
-            <article
-              class="text-center process-card"
-              data-aos="zoom-in"
-              data-aos-delay="100"
-            >
-              <div
-                class="w-20 h-20 bg-gradient-to-br from-mustard to-gold rounded-full flex items-center justify-center mx-auto mb-4"
-              >
-                <i
-                  class="fas fa-shopping-cart text-licorice text-2xl"
-                  aria-hidden="true"
-                ></i>
-              </div>
-              <h3 class="font-bebas text-xl text-gold mb-2">1. Seleção</h3>
-              <p class="text-smoke text-sm">
+          <div class="steps">
+            <div class="step" data-aos="fade-up" data-aos-delay="200">
+              <div class="step-icon">🛒</div>
+              <h3>1. SELEÇÃO</h3>
+              <p>
                 Escolhemos os melhores ingredientes frescos do mercado local
               </p>
-            </article>
-
-            <article
-              class="text-center process-card"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            >
-              <div
-                class="w-20 h-20 bg-gradient-to-br from-mustard to-gold rounded-full flex items-center justify-center mx-auto mb-4"
-              >
-                <i
-                  class="fas fa-hands text-licorice text-2xl"
-                  aria-hidden="true"
-                ></i>
-              </div>
-              <h3 class="font-bebas text-xl text-gold mb-2">2. Preparo</h3>
-              <p class="text-smoke text-sm">
+            </div>
+            <div class="step" data-aos="fade-up" data-aos-delay="400">
+              <div class="step-icon">👨‍🍳</div>
+              <h3>2. PREPARO</h3>
+              <p>
                 Preparamos cada hambúrguer artesanalmente, na hora do pedido
               </p>
-            </article>
-
-            <article
-              class="text-center process-card"
-              data-aos="zoom-in"
-              data-aos-delay="300"
-            >
-              <div
-                class="w-20 h-20 bg-gradient-to-br from-mustard to-gold rounded-full flex items-center justify-center mx-auto mb-4"
-              >
-                <i
-                  class="fas fa-fire text-licorice text-2xl"
-                  aria-hidden="true"
-                ></i>
-              </div>
-              <h3 class="font-bebas text-xl text-gold mb-2">3. Grelhado</h3>
-              <p class="text-smoke text-sm">
+            </div>
+            <div class="step" data-aos="fade-up" data-aos-delay="600">
+              <div class="step-icon">🔥</div>
+              <h3>3. GRELHADO</h3>
+              <p>
                 Grelhamos no ponto perfeito para garantir suculência e sabor
               </p>
-            </article>
-
-            <article
-              class="text-center process-card"
-              data-aos="zoom-in"
-              data-aos-delay="400"
-            >
-              <div
-                class="w-20 h-20 bg-gradient-to-br from-mustard to-gold rounded-full flex items-center justify-center mx-auto mb-4"
-              >
-                <i
-                  class="fas fa-utensils text-licorice text-2xl"
-                  aria-hidden="true"
-                ></i>
-              </div>
-              <h3 class="font-bebas text-xl text-gold mb-2">4. Servido</h3>
-              <p class="text-smoke text-sm">
-                Montamos e servimos com carinho para sua experiência única
-              </p>
-            </article>
+            </div>
+            <div class="step" data-aos="fade-up" data-aos-delay="800">
+              <div class="step-icon">🍽️</div>
+              <h3>4. SERVIDO</h3>
+              <p>Montamos e servimos com carinho para sua experiência única</p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Menu Section -->
-      <section id="menu" class="py-24 bg-raisin">
-        <div class="container mx-auto px-6">
-          <header class="text-center mb-16" data-aos="fade-up">
-            <h2 class="font-bebas text-5xl text-mustard mb-4">
-              Nosso Cardápio
-            </h2>
-            <p class="text-xl text-smoke mb-8">
-              Sabores únicos que vão conquistar seu paladar
-            </p>
+      <section id="cardapio" class="menu">
+        <div class="container">
+          <h2 data-aos="fade-up">NOSSO CARDÁPIO</h2>
+          <p class="subtitle" data-aos="fade-up" data-aos-delay="200">
+            Sabores únicos que vão conquistar seu paladar
+          </p>
 
-            <!-- Link para Cardápio -->
-            <div
-              class="max-w-2xl mx-auto bg-licorice rounded-2xl p-8 menu-card"
-              data-aos="zoom-in"
-              data-aos-delay="200"
-            >
-              <div class="text-center">
-                <div
-                  class="w-20 h-20 bg-mustard rounded-full flex items-center justify-center mx-auto mb-6"
-                >
-                  <i
-                    class="fas fa-book-open text-licorice text-2xl"
-                    aria-hidden="true"
-                  ></i>
-                </div>
-                <h3 class="font-bebas text-3xl text-mustard mb-4">
-                  Cardápio Digital
-                </h3>
-                <p class="text-smoke mb-6 text-lg">
-                  Descubra todos os nossos hambúrgueres artesanais,
-                  acompanhamentos deliciosos, bebidas especiais e sobremesas
-                  irresistíveis.
-                </p>
-                <a
-                  href="https://instadelivery.com.br/manosburguer5?fbclid=PAZXh0bgNhZW0CMTEAAaedhBnny5WwtBSWWgV2wGCK7Sx7Qw3QokySqC5bFikUdL3qQX4QoiDuz9oNhA_aem_SdB97BuFCh6CY3e5t7hzmw"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn-primary px-8 py-4 rounded-full text-lg inline-block"
-                  aria-label="Acessar cardápio completo em nova aba"
-                >
-                  <i
-                    class="fas fa-external-link-alt mr-2"
-                    aria-hidden="true"
-                  ></i>
-                  Acessar Cardápio Completo
-                </a>
-              </div>
+          <div class="menu-stats">
+            <div class="menu-stat" data-aos="fade-up" data-aos-delay="200">
+              <h3>8+</h3>
+              <p>Tipos de Hambúrgueres</p>
             </div>
-          </header>
+            <div class="menu-stat" data-aos="fade-up" data-aos-delay="400">
+              <h3>10+</h3>
+              <p>Acompanhamentos</p>
+            </div>
+            <div class="menu-stat" data-aos="fade-up" data-aos-delay="600">
+              <h3>5+</h3>
+              <p>Sobremesas</p>
+            </div>
+          </div>
 
-          <!-- Stats -->
-          <div class="grid md:grid-cols-4 gap-6 mt-16">
+          <div class="menu-grid">
             <div
-              class="text-center stats-card rounded-xl p-6"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div
-                class="text-3xl font-bebas text-mustard mb-2"
-                aria-label="15 tipos de hambúrgueres"
-              >
-                15+
-              </div>
-              <p class="text-smoke">Tipos de Hambúrgueres</p>
-            </div>
-            <div
-              class="text-center stats-card rounded-xl p-6"
+              class="burger-card"
+              data-burger="catupiry"
               data-aos="fade-up"
               data-aos-delay="200"
             >
-              <div
-                class="text-3xl font-bebas text-mustard mb-2"
-                aria-label="25 acompanhamentos"
-              >
-                25+
-              </div>
-              <p class="text-smoke">Acompanhamentos</p>
-            </div>
-            <div
-              class="text-center stats-card rounded-xl p-6"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div
-                class="text-3xl font-bebas text-mustard mb-2"
-                aria-label="10 bebidas especiais"
-              >
-                10+
-              </div>
-              <p class="text-smoke">Bebidas Especiais</p>
-            </div>
-            <div
-              class="text-center stats-card rounded-xl p-6"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <div
-                class="text-3xl font-bebas text-mustard mb-2"
-                aria-label="5 sobremesas"
-              >
-                5+
-              </div>
-              <p class="text-smoke">Sobremesas</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Gallery Section -->
-      <section id="gallery" class="py-24 bg-licorice">
-        <div class="container mx-auto px-6">
-          <div class="text-center mb-16" data-aos="fade-up">
-            <h2 class="font-bebas text-5xl text-mustard mb-4">
-              Nossos Burgers
-            </h2>
-            <p class="text-xl text-smoke mb-8">
-              Conheça nossos deliciosos hambúrgueres artesanais
-            </p>
-          </div>
-
-          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- SMASH CATUPIRY & BACON -->
-            <div class="burger-card" data-aos="fade-up" data-aos-delay="100">
-              <img src="assets/smash catupiri.jpeg" alt="SMASH CATUPIRY & BACON" class="w-full h-64 object-cover rounded-t-lg">
-              <div class="p-6 bg-raisin rounded-b-lg">
-                <h3 class="font-bebas text-2xl text-mustard mb-2">SMASH CATUPIRY & BACON</h3>
-                <button class="btn-primary w-full mt-4" onclick="openModal('smash-catupiry')">
-                  Ver Mais
-                </button>
-              </div>
-            </div>
-
-            <!-- SMASH CALABRESA -->
-            <div class="burger-card" data-aos="fade-up" data-aos-delay="200">
-              <img src="assets/smash calabresa.jpeg" alt="SMASH CALABRESA" class="w-full h-64 object-cover rounded-t-lg">
-              <div class="p-6 bg-raisin rounded-b-lg">
-                <h3 class="font-bebas text-2xl text-mustard mb-2">SMASH CALABRESA</h3>
-                <button class="btn-primary w-full mt-4" onclick="openModal('smash-calabresa')">
-                  Ver Mais
-                </button>
-              </div>
-            </div>
-
-            <!-- SMASH DUPLO CALABRESA -->
-            <div class="burger-card" data-aos="fade-up" data-aos-delay="300">
-              <img src="assets/smash duplo calabresa.jpeg" alt="SMASH DUPLO CALABRESA" class="w-full h-64 object-cover rounded-t-lg">
-              <div class="p-6 bg-raisin rounded-b-lg">
-                <h3 class="font-bebas text-2xl text-mustard mb-2">SMASH DUPLO CALABRESA</h3>
-                <button class="btn-primary w-full mt-4" onclick="openModal('smash-duplo-calabresa')">
-                  Ver Mais
-                </button>
-              </div>
-            </div>
-
-            <!-- TRADICIONAL -->
-            <div class="burger-card" data-aos="fade-up" data-aos-delay="400">
-              <img src="assets/tradicional.jpeg" alt="TRADICIONAL" class="w-full h-64 object-cover rounded-t-lg">
-              <div class="p-6 bg-raisin rounded-b-lg">
-                <h3 class="font-bebas text-2xl text-mustard mb-2">TRADICIONAL</h3>
-                <button class="btn-primary w-full mt-4" onclick="openModal('tradicional')">
-                  Ver Mais
-                </button>
-              </div>
-            </div>
-
-            <!-- OKLAHOMA -->
-            <div class="burger-card" data-aos="fade-up" data-aos-delay="500">
-              <img src="assets/oklahoma.jpeg" alt="OKLAHOMA" class="w-full h-64 object-cover rounded-t-lg">
-              <div class="p-6 bg-raisin rounded-b-lg">
-                <h3 class="font-bebas text-2xl text-mustard mb-2">OKLAHOMA</h3>
-                <button class="btn-primary w-full mt-4" onclick="openModal('oklahoma')">
-                  Ver Mais
-                </button>
-              </div>
-            </div>
-
-            <!-- SMASH X-TUDO -->
-            <div class="burger-card" data-aos="fade-up" data-aos-delay="600">
-              <img src="assets/smash x-tudo.jpeg" alt="SMASH X-TUDO" class="w-full h-64 object-cover rounded-t-lg">
-              <div class="p-6 bg-raisin rounded-b-lg">
-                <h3 class="font-bebas text-2xl text-mustard mb-2">SMASH X-TUDO</h3>
-                <button class="btn-primary w-full mt-4" onclick="openModal('smash-x-tudo')">
-                  Ver Mais
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      <!-- Delivery Section -->
-      <section class="py-24 bg-raisin">
-        <div class="container mx-auto px-6">
-          <div class="grid md:grid-cols-2 gap-12 items-center">
-            <article data-aos="fade-right">
-              <h2 class="font-bebas text-4xl text-mustard mb-4">
-                Delivery Rápido
-              </h2>
-              <p class="text-smoke mb-6 text-lg leading-relaxed">
-                Não pode vir até nós? Não tem problema! Levamos nossos
-                deliciosos hambúrgueres até você com nosso serviço de delivery
-                super rápido.
-              </p>
-              <ul class="space-y-4 mb-8 list-none">
-                <li class="flex items-center space-x-3">
-                  <i class="fas fa-clock text-mustard" aria-hidden="true"></i>
-                  <span class="text-smoke">Entrega em até 40 minutos</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <i
-                    class="fas fa-map-marker-alt text-mustard"
-                    aria-hidden="true"
-                  ></i>
-                  <span class="text-smoke">Cobertura em toda a cidade</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                  <i
-                    class="fas fa-motorcycle text-mustard"
-                    aria-hidden="true"
-                  ></i>
-                  <span class="text-smoke">Entregadores próprios</span>
-                </li>
-              </ul>
-              <a
-                target="_blank"
-                href="https://wa.me/5599985530545"
-                class="btn-primary px-8 py-4 rounded-full text-lg"
-                aria-label="Fazer pedido pelo WhatsApp"
-              >
-                <i class="fab fa-whatsapp mr-2" aria-hidden="true"></i>
-                Pedir pelo WhatsApp
-              </a>
-            </article>
-            <div data-aos="fade-left">
               <img
-                src="https://images.unsplash.com/photo-1526367790999-0150786686a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                alt="Entregador da Manos Burger realizando delivery"
-                class="rounded-2xl shadow-lg"
+                src="assets/smash catupiri.jpeg"
+                alt="Smash Catupiry & Bacon"
               />
+              <h3>SMASH CATUPIRY & BACON</h3>
+              <button class="btn-ver-mais">Ver Mais</button>
             </div>
+            <div
+              class="burger-card"
+              data-burger="calabresa"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <img src="assets/smash calabresa.jpeg" alt="Smash Calabresa" />
+              <h3>SMASH CALABRESA</h3>
+              <button class="btn-ver-mais">Ver Mais</button>
+            </div>
+            <div
+              class="burger-card"
+              data-burger="duplo"
+              data-aos="fade-up"
+              data-aos-delay="600"
+            >
+              <img
+                src="assets/smash duplo calabresa.jpeg"
+                alt="Smash Duplo Calabresa"
+              />
+              <h3>SMASH DUPLO CALABRESA</h3>
+              <button class="btn-ver-mais">Ver Mais</button>
+            </div>
+          </div>
+
+          <div class="menu-cta" data-aos="fade-up" data-aos-delay="800">
+            <a
+              href="https://instadelivery.com.br/manosburguer5?fbclid=PAZXh0bgNhZW0CMTEAAaedhBnny5WwtBSWWgV2wGCK7Sx7Qw3QokySqC5bFikUdL3qQX4QoiDuz9oNhA_aem_SdB97BuFCh6CY3e5t7hzmw"
+              class="btn primary"
+              target="_blank"
+              >Acessar Cardápio Completo</a
+            >
           </div>
         </div>
       </section>
 
-      <!-- Testimonials Section -->
-      <section id="testimonials" class="py-24 bg-licorice">
-        <div class="container mx-auto px-6">
-          <header class="text-center mb-16" data-aos="fade-up">
-            <h2 class="font-bebas text-5xl text-mustard mb-4">
-              O Que Dizem Nossos Clientes
-            </h2>
-            <p class="text-xl text-smoke">
-              Avaliações reais de quem já provou nossos hambúrgueres
-            </p>
-          </header>
+      <section id="avaliacoes" class="testimonials">
+        <div class="container">
+          <h2 data-aos="fade-up">O QUE DIZEM NOSSOS CLIENTES</h2>
+          <p class="subtitle" data-aos="fade-up" data-aos-delay="200">
+            Avaliações reais de quem já provou nossos hambúrgueres
+          </p>
 
-          <div class="grid md:grid-cols-3 gap-8">
-            <article
-              class="testimonial-card"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <div class="flex items-center mb-4">
-                <img
-                  src="https://images.unsplash.com/photo-1494790108755-2616b612b786?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80"
-                  alt="Foto de Maria Silva"
-                  class="w-12 h-12 rounded-full mr-4 object-cover"
-                />
-                <div>
-                  <h3 class="text-mustard font-semibold">Maria Silva</h3>
-                  <div
-                    class="flex text-gold"
-                    role="img"
-                    aria-label="5 estrelas"
-                  >
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                  </div>
+          <div class="testimonials-grid">
+            <div class="testimonial" data-aos="fade-up" data-aos-delay="200">
+              <div class="testimonial-header">
+                <div class="testimonial-avatar">
+                  <img
+                    src="https://ui-avatars.com/api/?name=Maria+Silva&background=FFD700&color=000"
+                    alt="Maria Silva"
+                  />
+                </div>
+                <div class="testimonial-info">
+                  <h3>Maria Silva</h3>
+                  <div class="stars">★★★★★</div>
                 </div>
               </div>
-              <blockquote class="text-smoke italic">
+              <p>
                 "Simplesmente o melhor hambúrguer que já comi! Ingredientes
                 frescos e sabor incrível."
-              </blockquote>
-            </article>
-
-            <article
-              class="testimonial-card"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <div class="flex items-center mb-4">
-                <img
-                  src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80"
-                  alt="Foto de João Santos"
-                  class="w-12 h-12 rounded-full mr-4 object-cover"
-                />
-                <div>
-                  <h3 class="text-mustard font-semibold">João Santos</h3>
-                  <div
-                    class="flex text-gold"
-                    role="img"
-                    aria-label="5 estrelas"
-                  >
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                  </div>
+              </p>
+            </div>
+            <div class="testimonial" data-aos="fade-up" data-aos-delay="400">
+              <div class="testimonial-header">
+                <div class="testimonial-avatar">
+                  <img
+                    src="https://ui-avatars.com/api/?name=João+Santos&background=FFD700&color=000"
+                    alt="João Santos"
+                  />
+                </div>
+                <div class="testimonial-info">
+                  <h3>João Santos</h3>
+                  <div class="stars">★★★★★</div>
                 </div>
               </div>
-              <blockquote class="text-smoke italic">
+              <p>
                 "Atendimento excepcional e hambúrgueres artesanais de primeira
                 qualidade. Virei cliente fiel!"
-              </blockquote>
-            </article>
-
-            <article
-              class="testimonial-card"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <div class="flex items-center mb-4">
-                <img
-                  src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=150&q=80"
-                  alt="Foto de Ana Costa"
-                  class="w-12 h-12 rounded-full mr-4 object-cover"
-                />
-                <div>
-                  <h3 class="text-mustard font-semibold">Ana Costa</h3>
-                  <div
-                    class="flex text-gold"
-                    role="img"
-                    aria-label="5 estrelas"
-                  >
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                    <i class="fas fa-star" aria-hidden="true"></i>
-                  </div>
+              </p>
+            </div>
+            <div class="testimonial" data-aos="fade-up" data-aos-delay="600">
+              <div class="testimonial-header">
+                <div class="testimonial-avatar">
+                  <img
+                    src="https://ui-avatars.com/api/?name=Ana+Costa&background=FFD700&color=000"
+                    alt="Ana Costa"
+                  />
+                </div>
+                <div class="testimonial-info">
+                  <h3>Ana Costa</h3>
+                  <div class="stars">★★★★★</div>
                 </div>
               </div>
-              <blockquote class="text-smoke italic">
+              <p>
                 "O ambiente é acolhedor e os hambúrgueres são uma obra de arte.
                 Recomendo demais!"
-              </blockquote>
-            </article>
+              </p>
+            </div>
           </div>
         </div>
       </section>
 
-      <!-- Contact Section -->
-      <section id="contact" class="py-24 bg-raisin">
-        <div class="container mx-auto px-6">
-          <header class="text-center mb-16" data-aos="fade-up">
-            <h2 class="font-bebas text-5xl text-mustard mb-4">Contatos</h2>
-            <p class="text-xl text-smoke">
-              Venha conhecer nossa hamburgueria! Utilize nossos contatos
+      <section id="contato" class="delivery">
+        <div class="container">
+          <div class="delivery-content" data-aos="fade-right">
+            <h2>DELIVERY RÁPIDO</h2>
+            <p>
+              Não pode vir até nós? Não tem problema! Levamos nossos deliciosos
+              hambúrgueres até você com nosso serviço de delivery super rápido.
             </p>
-          </header>
 
-          <div class="grid md:grid-cols-2 gap-12">
-            <div data-aos="fade-right">
-              <address class="space-y-6 not-italic">
-                <!-- <div class="flex items-start space-x-4">
-                                <div class="w-12 h-12 bg-mustard rounded-full flex items-center justify-center flex-shrink-0">
-                                    <i class="fas fa-map-marker-alt text-licorice" aria-hidden="true"></i>
-                                </div>
-                                <div>
-                                    <h3 class="text-gold font-semibold text-lg mb-2">Endereço</h3>
-                                    <p class="text-smoke">Rua dos Sabores, 123<br>Centro, São Paulo - SP<br>CEP: 01234-567</p>
-                                </div>
-                            </div> -->
+            <ul class="delivery-features">
+              <li>
+                <span class="icon">🏃</span>
+                Entrega em até 40 minutos
+              </li>
+              <li>
+                <span class="icon">🎯</span>
+                Cobertura em toda a cidade
+              </li>
+              <li>
+                <span class="icon">🛵</span>
+                Entregadores próprios
+              </li>
+            </ul>
 
-                <div class="flex items-start space-x-4">
-                  <div
-                    class="w-12 h-12 bg-mustard rounded-full flex items-center justify-center flex-shrink-0"
-                  >
-                    <i
-                      class="fas fa-phone text-licorice"
-                      aria-hidden="true"
-                    ></i>
-                  </div>
-                  <div>
-                    <h3 class="text-gold font-semibold text-lg mb-2">
-                      Telefone
-                    </h3>
-                    <p class="text-smoke">
-                      <a
-                        target="_blank"
-                        href="https://wa.me/5599985530545"
-                        class="hover:text-mustard transition-colors"
-                        >(99) 985530545</a
-                      ><br />
-                      <a
-                        target="_blank"
-                        href="https://wa.me/5599985530545"
-                        class="hover:text-mustard transition-colors"
-                        >WhatsApp: (99) 985530545</a
-                      >
-                    </p>
-                  </div>
-                </div>
+            <a href="https://wa.me/5599985530545" target="_blank" class="btn whatsapp">
+              <span class="icon">📱</span>
+              Pedir pelo WhatsApp
+            </a>
+          </div>
+          <div class="delivery-image" data-aos="fade-left">
+            <img
+              src="https://images.unsplash.com/photo-1526367790999-0150786686a2?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+              alt="Entregador Manos Burger em Moto"
+            />
+          </div>
+        </div>
+      </section>
 
-                <div class="flex items-start space-x-4">
-                  <div
-                    class="w-12 h-12 bg-mustard rounded-full flex items-center justify-center flex-shrink-0"
-                  >
-                    <i
-                      class="fas fa-clock text-licorice"
-                      aria-hidden="true"
-                    ></i>
-                  </div>
-                  <div>
-                    <h3 class="text-gold font-semibold text-lg mb-2">
-                      Horário de Funcionamento
-                    </h3>
-                    <p class="text-smoke">
-                      Segunda a Quinta: 18h às 23h<br />Sexta a Domingo: 18h às
-                      00h
-                    </p>
-                  </div>
-                </div>
-              </address>
+      <section id="contato" class="contact">
+        <div class="container">
+          <h2 data-aos="fade-up">FALE CONOSCO</h2>
+          <p class="subtitle" data-aos="fade-up" data-aos-delay="200">
+            Entre em contato para dúvidas, sugestões ou parcerias
+          </p>
 
-              <div class="flex space-x-4 mt-8">
-                <a
-                  href="https://www.instagram.com/manos_burguer_lp/"
-                  target="_blank"
-                  class="w-12 h-12 bg-mustard rounded-full flex items-center justify-center hover:bg-gold transition-colors"
-                  aria-label="Seguir no Instagram"
-                >
-                  <i
-                    class="fab fa-instagram text-licorice"
-                    aria-hidden="true"
-                  ></i>
-                </a>
-
-                <a
-                  target="_blank"
-                  href="https://wa.me/5599985530545"
-                  class="w-12 h-12 bg-mustard rounded-full flex items-center justify-center hover:bg-gold transition-colors"
-                  aria-label="Contato via WhatsApp"
-                >
-                  <i
-                    class="fab fa-whatsapp text-licorice"
-                    aria-hidden="true"
-                  ></i>
-                </a>
+          <div class="contact-grid">
+            <form
+              class="contact-form"
+              data-aos="fade-left"
+              action="https://formsubmit.co/manosburguer@gmail.com"
+              method="POST"
+            >
+              <div class="form-group">
+                <label for="name">Nome</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  required
+                  placeholder="Seu nome completo"
+                />
               </div>
-            </div>
-
-            <div data-aos="fade-left">
-              <div class="bg-licorice rounded-2xl p-8">
-                <h3 class="font-bebas text-2xl text-mustard mb-6">
-                  Faça sua Reserva
-                </h3>
-                <form
-                  action="https://formsubmit.co/manosburguer@gamil.com"
-                  method="POST"
-                  class="space-y-4"
-                  novalidate
-                >
-                  <div>
-                    <label for="name" class="sr-only">Seu Nome</label>
-                    <input
-                      type="text"
-                      id="name"
-                      name="name"
-                      placeholder="Seu Nome"
-                      required
-                      class="w-full bg-raisin border border-gold rounded-lg px-4 py-3 text-smoke focus:outline-none focus:border-mustard"
-                      aria-required="true"
-                    />
-                  </div>
-                  <div>
-                    <label for="email" class="sr-only">Seu E-mail</label>
-                    <input
-                      type="email"
-                      id="email"
-                      name="email"
-                      placeholder="Seu E-mail"
-                      required
-                      class="w-full bg-raisin border border-gold rounded-lg px-4 py-3 text-smoke focus:outline-none focus:border-mustard"
-                      aria-required="true"
-                    />
-                  </div>
-                  <div>
-                    <label for="phone" class="sr-only">Seu Telefone</label>
-                    <input
-                      type="tel"
-                      id="phone"
-                      name="phone"
-                      placeholder="Seu Telefone"
-                      required
-                      class="w-full bg-raisin border border-gold rounded-lg px-4 py-3 text-smoke focus:outline-none focus:border-mustard"
-                      aria-required="true"
-                    />
-                  </div>
-                  <div>
-                    <label for="message" class="sr-only">Mensagem</label>
-                    <textarea
-                      id="message"
-                      name="message"
-                      placeholder="Mensagem"
-                      rows="4"
-                      class="w-full bg-raisin border border-gold rounded-lg px-4 py-3 text-smoke focus:outline-none focus:border-mustard resize-none"
-                    ></textarea>
-                  </div>
-                  <button
-                    type="submit"
-                    class="btn-primary w-full py-3 rounded-lg"
-                  >
-                    <i class="fas fa-paper-plane mr-2" aria-hidden="true"></i>
-                    Enviar Mensagem
-                  </button>
-                </form>
+              <div class="form-group">
+                <label for="email">E-mail</label>
+                <input
+                  type="email"
+                  id="email"
+                  name="email"
+                  required
+                  placeholder="Seu melhor e-mail"
+                />
               </div>
-            </div>
+              <div class="form-group">
+                <label for="phone">Telefone</label>
+                <input
+                  type="tel"
+                  id="phone"
+                  name="phone"
+                  required
+                  placeholder="(XX) XXXXX-XXXX"
+                />
+              </div>
+              <div class="form-group">
+                <label for="message">Mensagem</label>
+                <textarea
+                  id="message"
+                  name="message"
+                  required
+                  placeholder="Digite sua mensagem"
+                ></textarea>
+              </div>
+              <button type="submit" class="btn primary">Enviar Mensagem</button>
+            </form>
           </div>
         </div>
       </section>
     </main>
 
-    <!-- Footer -->
-    <footer class="bg-licorice py-12 border-t border-gold">
-      <div class="container mx-auto px-6">
-        <div class="flex flex-col md:flex-row justify-between items-center">
-          <div class="text-2xl font-bebas text-mustard mb-4 md:mb-0">
-            <i class="fas fa-hamburger mr-2" aria-hidden="true"></i>
-            <span>Manos Burger</span>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo" data-aos="fade-up">
+            <img
+              src="assets/manos-logo.png"
+              alt="Manos Burger Logo"
+              width="40"
+              height="40"
+            />
+            <h3>MANOS BURGER</h3>
           </div>
-          <div class="text-smoke text-center md:text-right">
-            <p>© 2024 Manos Burger. Todos os direitos reservados.</p>
-            <p class="text-gold">Feito com ❤️ para os amantes de hambúrguer</p>
-          </div>
+          <p>&copy; 2024 Manos Burger. Todos os direitos reservados.</p>
         </div>
       </div>
     </footer>
 
-    <!-- AOS Library Script -->
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-
-    <!-- Custom JavaScript -->
-    <script src="script.js"></script>
-
     <!-- Modal -->
-    <div id="burger-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
-      <div class="bg-raisin max-w-lg w-full mx-4 rounded-lg shadow-xl">
-        <div class="p-6">
-          <div class="flex justify-between items-center mb-4">
-            <h3 id="modal-title" class="font-bebas text-3xl text-mustard"></h3>
-            <button onclick="closeModal()" class="text-smoke hover:text-mustard">
-              <i class="fas fa-times text-xl"></i>
-            </button>
-          </div>
-          <div id="modal-content" class="text-smoke">
-            <!-- Conteúdo do modal será preenchido via JavaScript -->
+    <div id="burgerModal" class="modal">
+      <div class="modal-content">
+        <span class="close-modal">&times;</span>
+        <div class="modal-body">
+          <img src="" alt="" class="modal-image" />
+          <div class="modal-info">
+            <h3 class="modal-title"></h3>
+            <ul class="modal-ingredients"></ul>
+            <a
+              href="https://instadelivery.com.br/manosburguer5?fbclid=PAZXh0bgNhZW0CMTEAAaedhBnny5WwtBSWWgV2wGCK7Sx7Qw3QokySqC5bFikUdL3qQX4QoiDuz9oNhA_aem_SdB97BuFCh6CY3e5t7hzmw"
+              class="btn primary"
+              target="_blank"
+              >Peça Agora</a
+            >
           </div>
         </div>
       </div>
     </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
