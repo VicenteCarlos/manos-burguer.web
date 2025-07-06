@@ -13,6 +13,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    max-width: 100%;
 }
 
 html {
@@ -562,6 +563,7 @@ h2 {
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 2000;
     overflow: hidden;
+    width: 100%;
 }
 
 .modal.active {
@@ -606,6 +608,8 @@ h2 {
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
     padding: 2rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .modal-image {
@@ -616,7 +620,8 @@ h2 {
 }
 
 .modal-info {
-    padding: 1rem;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .modal-title {
@@ -646,22 +651,30 @@ h2 {
 @media (max-width: 768px) {
     .modal.active {
         padding: 0;
+        width: 100vw;
+        min-height: 100vh;
+        box-sizing: border-box;
     }
 
     .modal-content {
         margin: 0;
         height: 100vh;
+        width: 100%;
         max-height: 100vh;
         border-radius: 0;
+        overflow-x: hidden;
     }
 
     .modal-body {
         grid-template-columns: 1fr;
         padding: 1rem;
         gap: 1rem;
-        overflow: auto;
+        overflow-y: auto;
+        overflow-x: hidden;
         -webkit-overflow-scrolling: touch;
         height: calc(100vh - 60px);
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .modal-image {
@@ -672,7 +685,8 @@ h2 {
 
     .modal-info {
         padding: 0;
-        overflow-y: auto;
+        width: 100%;
+        box-sizing: border-box;
     }
 
     .close-modal {
