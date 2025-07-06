@@ -561,30 +561,40 @@ h2 {
     bottom: 0;
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 2000;
-    padding: 2rem;
-    overflow-y: auto;
+    overflow: hidden;
 }
 
 .modal.active {
     display: flex;
     align-items: center;
     justify-content: center;
+    padding: 1rem;
 }
 
 .modal-content {
     background-color: var(--color-background);
     border-radius: var(--border-radius);
     max-width: 800px;
-    width: 90%;
+    width: 100%;
     position: relative;
     margin: auto;
     animation: modalFadeIn 0.3s ease-out;
+    max-height: 90vh;
+    overflow-y: auto;
+    overflow-x: hidden;
 }
 
 .close-modal {
     position: absolute;
-    top: 1rem;
-    right: 1rem;
+    top: 0.5rem;
+    right: 0.5rem;
+    background: var(--color-background);
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
     font-size: 2rem;
     color: var(--color-primary);
     cursor: pointer;
@@ -634,24 +644,57 @@ h2 {
 
 /* Responsividade */
 @media (max-width: 768px) {
+    .modal.active {
+        padding: 0;
+    }
+
+    .modal-content {
+        margin: 0;
+        height: 100vh;
+        max-height: 100vh;
+        border-radius: 0;
+    }
+
     .modal-body {
         grid-template-columns: 1fr;
         padding: 1rem;
+        gap: 1rem;
+        overflow: auto;
+        -webkit-overflow-scrolling: touch;
+        height: calc(100vh - 60px);
     }
 
     .modal-image {
-        max-height: 300px;
+        max-height: 250px;
         width: 100%;
+        object-fit: cover;
     }
 
     .modal-info {
-        padding: 1rem 0;
+        padding: 0;
+        overflow-y: auto;
+    }
+
+    .close-modal {
+        top: 0.5rem;
+        right: 0.5rem;
+        background: var(--color-background);
+        width: 40px;
+        height: 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
     }
 
     .contact-form {
         width: 100%;
         padding: 1.5rem;
     }
+}
+
+body.modal-open {
+    overflow: hidden;
 }
 
 /* Footer */
