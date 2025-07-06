@@ -501,7 +501,7 @@ h2 {
     background-color: var(--color-background);
     padding: 2rem;
     border-radius: var(--border-radius);
-    width: 50vw;
+    width: min(90%, 600px);
     margin: 0 auto;
 }
 
@@ -539,23 +539,16 @@ h2 {
     resize: vertical;
 }
 
-/* Footer */
-.footer {
-    background-color: var(--color-background-alt);
-    padding: 2rem 0;
-    text-align: center;
-}
-
-.footer-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 0.5rem;
-    margin-bottom: 1rem;
-}
-
-.footer-logo h3 {
-    color: var(--color-primary);
+/* Animação do Modal */
+@keyframes modalFadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.8);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 /* Modal */
@@ -569,6 +562,7 @@ h2 {
     background-color: rgba(0, 0, 0, 0.9);
     z-index: 2000;
     padding: 2rem;
+    overflow-y: auto;
 }
 
 .modal.active {
@@ -581,8 +575,10 @@ h2 {
     background-color: var(--color-background);
     border-radius: var(--border-radius);
     max-width: 800px;
-    width: 100%;
+    width: 90%;
     position: relative;
+    margin: auto;
+    animation: modalFadeIn 0.3s ease-out;
 }
 
 .close-modal {
@@ -599,17 +595,18 @@ h2 {
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 2rem;
+    padding: 2rem;
 }
 
 .modal-image {
     width: 100%;
     aspect-ratio: 1;
     object-fit: cover;
-    border-radius: var(--border-radius) 0 0 var(--border-radius);
+    border-radius: var(--border-radius);
 }
 
 .modal-info {
-    padding: 2rem;
+    padding: 1rem;
 }
 
 .modal-title {
@@ -632,6 +629,47 @@ h2 {
 
 .modal-ingredients li::before {
     content: "✓";
+    color: var(--color-primary);
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .modal-body {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+
+    .modal-image {
+        max-height: 300px;
+        width: 100%;
+    }
+
+    .modal-info {
+        padding: 1rem 0;
+    }
+
+    .contact-form {
+        width: 100%;
+        padding: 1.5rem;
+    }
+}
+
+/* Footer */
+.footer {
+    background-color: var(--color-background-alt);
+    padding: 2rem 0;
+    text-align: center;
+}
+
+.footer-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.footer-logo h3 {
     color: var(--color-primary);
 }
 
