@@ -351,10 +351,9 @@
                 Uma Paixão que Virou Tradição
               </h3>
               <p class="text-smoke mb-4 leading-relaxed">
-                Tudo começou em 2015, quando dois amigos apaixonados por
-                gastronomia decidiram criar algo especial. Com receitas
-                familiares e muito amor pela arte culinária, nasceu a Golden
-                Burger.
+                Tudo começou em 2025, quando nós que somos apaixonados por
+                gastronomia decidimos criar algo especial. Com receitas
+                familiares e muito amor pela arte culinária, nasceu o Manos Burger.
               </p>
               <p class="text-smoke mb-6 leading-relaxed">
                 Hoje, somos reconhecidos como a melhor hamburgueria da cidade,
@@ -585,101 +584,80 @@
       <section id="gallery" class="py-24 bg-licorice">
         <div class="container mx-auto px-6">
           <header class="text-center mb-16" data-aos="fade-up">
-            <h2 class="font-bebas text-5xl text-mustard mb-4">Galeria</h2>
-            <p class="text-xl text-smoke">
-              Conheça nosso ambiente e nossos pratos
+            <h2 class="font-bebas text-5xl text-mustard mb-4">
+              Nossos Burgers
+            </h2>
+            <p class="text-xl text-smoke mb-8">
+              Conheça nossos deliciosos hambúrgueres artesanais
             </p>
           </header>
 
-          <div
-            class="grid md:grid-cols-3 gap-6"
-            role="img"
-            aria-label="Galeria de fotos do restaurante"
-          >
-            <figure
-              class="gallery-item"
-              data-aos="fade-up"
-              data-aos-delay="100"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                alt="Interior aconchegante do restaurante Manos Burger"
-                class="w-full h-64 object-cover rounded-xl"
-              />
-              <div class="gallery-overlay">
-                <i class="fas fa-search-plus text-2xl" aria-hidden="true"></i>
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- SMASH CATUPIRY & BACON -->
+            <div class="burger-card" data-aos="fade-up" data-aos-delay="100">
+              <img src="assets/smash catupiri.jpeg" alt="SMASH CATUPIRY & BACON" class="w-full h-64 object-cover rounded-t-lg">
+              <div class="p-6 bg-raisin rounded-b-lg">
+                <h3 class="font-bebas text-2xl text-mustard mb-2">SMASH CATUPIRY & BACON</h3>
+                <button class="btn-primary w-full mt-4" onclick="openModal('smash-catupiry')">
+                  Ver Mais
+                </button>
               </div>
-            </figure>
-            <figure
-              class="gallery-item"
-              data-aos="fade-up"
-              data-aos-delay="200"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1550547660-d9450f859349?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                alt="Hambúrguer artesanal Manos Burger com ingredientes frescos"
-                class="w-full h-64 object-cover rounded-xl"
-              />
-              <div class="gallery-overlay">
-                <i class="fas fa-search-plus text-2xl" aria-hidden="true"></i>
+            </div>
+
+            <!-- SMASH CALABRESA -->
+            <div class="burger-card" data-aos="fade-up" data-aos-delay="200">
+              <img src="assets/smash calabresa.jpeg" alt="SMASH CALABRESA" class="w-full h-64 object-cover rounded-t-lg">
+              <div class="p-6 bg-raisin rounded-b-lg">
+                <h3 class="font-bebas text-2xl text-mustard mb-2">SMASH CALABRESA</h3>
+                <button class="btn-primary w-full mt-4" onclick="openModal('smash-calabresa')">
+                  Ver Mais
+                </button>
               </div>
-            </figure>
-            <figure
-              class="gallery-item"
-              data-aos="fade-up"
-              data-aos-delay="300"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1556909114-f6e7ad7d3136?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                alt="Cozinha profissional onde são preparados os hambúrgueres"
-                class="w-full h-64 object-cover rounded-xl"
-              />
-              <div class="gallery-overlay">
-                <i class="fas fa-search-plus text-2xl" aria-hidden="true"></i>
+            </div>
+
+            <!-- SMASH DUPLO CALABRESA -->
+            <div class="burger-card" data-aos="fade-up" data-aos-delay="300">
+              <img src="assets/smash duplo calabresa.jpeg" alt="SMASH DUPLO CALABRESA" class="w-full h-64 object-cover rounded-t-lg">
+              <div class="p-6 bg-raisin rounded-b-lg">
+                <h3 class="font-bebas text-2xl text-mustard mb-2">SMASH DUPLO CALABRESA</h3>
+                <button class="btn-primary w-full mt-4" onclick="openModal('smash-duplo-calabresa')">
+                  Ver Mais
+                </button>
               </div>
-            </figure>
-            <figure
-              class="gallery-item"
-              data-aos="fade-up"
-              data-aos-delay="400"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1577219491135-ce391730fb2c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                alt="Equipe de chefs preparando hambúrgueres artesanais"
-                class="w-full h-64 object-cover rounded-xl"
-              />
-              <div class="gallery-overlay">
-                <i class="fas fa-search-plus text-2xl" aria-hidden="true"></i>
+            </div>
+
+            <!-- TRADICIONAL -->
+            <div class="burger-card" data-aos="fade-up" data-aos-delay="400">
+              <img src="assets/tradicional.jpeg" alt="TRADICIONAL" class="w-full h-64 object-cover rounded-t-lg">
+              <div class="p-6 bg-raisin rounded-b-lg">
+                <h3 class="font-bebas text-2xl text-mustard mb-2">TRADICIONAL</h3>
+                <button class="btn-primary w-full mt-4" onclick="openModal('tradicional')">
+                  Ver Mais
+                </button>
               </div>
-            </figure>
-            <figure
-              class="gallery-item"
-              data-aos="fade-up"
-              data-aos-delay="500"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1506368249639-73a05d6f6488?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                alt="Ingredientes frescos utilizados nos hambúrgueres"
-                class="w-full h-64 object-cover rounded-xl"
-              />
-              <div class="gallery-overlay">
-                <i class="fas fa-search-plus text-2xl" aria-hidden="true"></i>
+            </div>
+
+            <!-- OKLAHOMA -->
+            <div class="burger-card" data-aos="fade-up" data-aos-delay="500">
+              <img src="assets/oklahoma.jpeg" alt="OKLAHOMA" class="w-full h-64 object-cover rounded-t-lg">
+              <div class="p-6 bg-raisin rounded-b-lg">
+                <h3 class="font-bebas text-2xl text-mustard mb-2">OKLAHOMA</h3>
+                <button class="btn-primary w-full mt-4" onclick="openModal('oklahoma')">
+                  Ver Mais
+                </button>
               </div>
-            </figure>
-            <figure
-              class="gallery-item"
-              data-aos="fade-up"
-              data-aos-delay="600"
-            >
-              <img
-                src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=800&q=80"
-                alt="Clientes satisfeitos degustando hambúrgueres"
-                class="w-full h-64 object-cover rounded-xl"
-              />
-              <div class="gallery-overlay">
-                <i class="fas fa-search-plus text-2xl" aria-hidden="true"></i>
+            </div>
+
+            <!-- SMASH X-TUDO -->
+            <div class="burger-card" data-aos="fade-up" data-aos-delay="600">
+              <img src="assets/smash x-tudo.jpeg" alt="SMASH X-TUDO" class="w-full h-64 object-cover rounded-t-lg">
+              <div class="p-6 bg-raisin rounded-b-lg">
+                <h3 class="font-bebas text-2xl text-mustard mb-2">SMASH X-TUDO</h3>
+                <button class="btn-primary w-full mt-4" onclick="openModal('smash-x-tudo')">
+                  Ver Mais
+                </button>
               </div>
-            </figure>
+            </div>
           </div>
         </div>
       </section>
@@ -700,7 +678,7 @@
               <ul class="space-y-4 mb-8 list-none">
                 <li class="flex items-center space-x-3">
                   <i class="fas fa-clock text-mustard" aria-hidden="true"></i>
-                  <span class="text-smoke">Entrega em até 30 minutos</span>
+                  <span class="text-smoke">Entrega em até 40 minutos</span>
                 </li>
                 <li class="flex items-center space-x-3">
                   <i
@@ -1044,5 +1022,22 @@
 
     <!-- Custom JavaScript -->
     <script src="script.js"></script>
+
+    <!-- Modal -->
+    <div id="burger-modal" class="fixed inset-0 bg-black bg-opacity-50 hidden z-50 flex items-center justify-center">
+      <div class="bg-raisin max-w-lg w-full mx-4 rounded-lg shadow-xl">
+        <div class="p-6">
+          <div class="flex justify-between items-center mb-4">
+            <h3 id="modal-title" class="font-bebas text-3xl text-mustard"></h3>
+            <button onclick="closeModal()" class="text-smoke hover:text-mustard">
+              <i class="fas fa-times text-xl"></i>
+            </button>
+          </div>
+          <div id="modal-content" class="text-smoke">
+            <!-- Conteúdo do modal será preenchido via JavaScript -->
+          </div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>

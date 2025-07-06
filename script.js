@@ -227,3 +227,132 @@ if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
         disable: true
     });
 }
+
+// Dados dos burgers
+const burgerData = {
+    'smash-catupiry': {
+        title: 'SMASH CATUPIRY & BACON',
+        ingredients: [
+            '80g de carne smash',
+            'Requeijão tipo catupiry',
+            'Cheddar fatia',
+            'Bacon em fatias',
+            'Maionese verde',
+            'Pão brioche'
+        ]
+    },
+    'smash-calabresa': {
+        title: 'SMASH CALABRESA',
+        ingredients: [
+            'Carne smash 80g',
+            'Queijo muçarela',
+            'Calabresa fatiada fininha e tostada',
+            'Maionese de alho',
+            'Pão brioche'
+        ]
+    },
+    'smash-duplo-calabresa': {
+        title: 'SMASH DUPLO CALABRESA',
+        ingredients: [
+            'Dois smash de 80g',
+            'Queijo cheddar',
+            'Calabresa fininha tostada na chapa',
+            'Maionese verde',
+            'Pão brioche'
+        ]
+    },
+    'tradicional': {
+        title: 'TRADICIONAL',
+        ingredients: [
+            'Carne smash 80g',
+            'Vinagrete',
+            'Alface',
+            'Queijo Muçarela',
+            'Molho rosê',
+            'Pão brioche'
+        ]
+    },
+    'oklahoma': {
+        title: 'OKLAHOMA',
+        ingredients: [
+            'Um smash de 80g com muita cebola',
+            'Duas fatias de queijo cheddar',
+            'Bacon',
+            'Molho rosê',
+            'Pão brioche'
+        ]
+    },
+    'smash-x-tudo': {
+        title: 'SMASH X-TUDO',
+        ingredients: [
+            'Dois smash de carne (80g cada)',
+            'Queijo cheddar + muçarela',
+            'Presunto',
+            'Ovo',
+            'Bacon',
+            'Batata palha',
+            'Molho Rosê',
+            'Pão brioche'
+        ]
+    }
+};
+
+// Funções do Modal
+function openModal(burgerId) {
+    const modal = document.getElementById('burger-modal');
+    const modalTitle = document.getElementById('modal-title');
+    const modalContent = document.getElementById('modal-content');
+    const burger = burgerData[burgerId];
+
+    if (burger) {
+        modalTitle.textContent = burger.title;
+        
+        // Criar lista de ingredientes
+        const ingredientsList = document.createElement('ul');
+        ingredientsList.className = 'space-y-2';
+        
+        burger.ingredients.forEach(ingredient => {
+            const li = document.createElement('li');
+            li.className = 'flex items-center';
+            li.innerHTML = `<i class="fas fa-check text-mustard mr-2"></i>${ingredient}`;
+            ingredientsList.appendChild(li);
+        });
+
+        modalContent.innerHTML = '';
+        modalContent.appendChild(ingredientsList);
+        
+        // Mostrar modal com animação
+        modal.classList.remove('hidden');
+        modal.classList.add('fade-in');
+        
+        // Adicionar listener para fechar com ESC
+        document.addEventListener('keydown', handleEscKey);
+        
+        // Impedir scroll do body
+        document.body.style.overflow = 'hidden';
+    }
+}
+
+function closeModal() {
+    const modal = document.getElementById('burger-modal');
+    modal.classList.add('hidden');
+    
+    // Remover listener do ESC
+    document.removeEventListener('keydown', handleEscKey);
+    
+    // Restaurar scroll do body
+    document.body.style.overflow = '';
+}
+
+function handleEscKey(e) {
+    if (e.key === 'Escape') {
+        closeModal();
+    }
+}
+
+// Fechar modal ao clicar fora
+document.getElementById('burger-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+        closeModal();
+    }
+});
