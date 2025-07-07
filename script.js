@@ -116,4 +116,25 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   submitButton.disabled = true;
   spinner.style.display = 'inline-block';
   buttonText.textContent = 'Enviando...';
-}); 
+});
+
+function openModal(burger) {
+  const modal = document.querySelector('.modal');
+  const modalTitle = modal.querySelector('h2');
+  const modalImage = modal.querySelector('img');
+  const modalDescription = modal.querySelector('p');
+
+  modalTitle.textContent = burger.title;
+  modalImage.src = burger.image;
+  modalImage.alt = burger.title;
+  modalDescription.textContent = burger.description;
+
+  modal.style.display = 'flex';
+  document.body.classList.add('modal-open'); // Adiciona a classe ao abrir
+}
+
+function closeModal() {
+  const modal = document.querySelector('.modal');
+  modal.style.display = 'none';
+  document.body.classList.remove('modal-open'); // Remove a classe ao fechar
+} 

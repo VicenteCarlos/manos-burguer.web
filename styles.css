@@ -595,6 +595,17 @@ h2 {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 2000;
+  backdrop-filter: blur(5px);
+}
+
+/* Classe para quando o modal estiver aberto */
+body.modal-open {
+  overflow: hidden;
+  pointer-events: none;
+}
+
+body.modal-open .modal {
+  pointer-events: all;
 }
 
 .modal.active {
