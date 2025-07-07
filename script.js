@@ -107,14 +107,71 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
 });
 
 // Gerenciamento do Formulário
-document.getElementById('contactForm').addEventListener('submit', function(e) {
-  const submitButton = document.getElementById('submitButton');
-  const spinner = submitButton.querySelector('.loading-spinner');
-  const buttonText = submitButton.querySelector('span');
-  
-  // Mostra loading
-  submitButton.disabled = true;
-  spinner.style.display = 'inline-block';
-  buttonText.textContent = 'Enviando...';
+const phoneInput = document.querySelector('input[type="tel"]');
+const emailInput = document.querySelector('input[type="email"]');
+const form = document.getElementById('contactForm');
+
+// Regex para validação de email
+const emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+
+function validateEmail(email) {
+    return emailRegex.test(email);
+}
+
+function handleEmailValidation(event) {
+    const email = event.target.value;
+    const isValid = validateEmail(email);
+    
+    if (!isValid && email !== '') {
+        event.target.setCustomValidity('Por favor, insira um email válido');
+        event.target.classList.add('invalid');
+    } else {
+        event.target.setCustomValidity('');
+        event.target.classList.remove('invalid');
+    }
+}
+
+// Event listeners para validação de email
+emailInput.addEventListener('input', handleEmailValidation);
+emailInput.addEventListener('blur', handleEmailValidation);
+
+function maskPhone(event) {
+    let value = event.target.value;
+    
+    // Remove tudo que não for número
+    value = value.replace(/\D/g, '');
+    
+    // Aplica a máscara
+    if (value.length <= 11) {
+        value = value.replace(/^(\d{2})(\d)/g, '($1) $2');
+        value = value.replace(/(\d)(\d{4})$/, '$1-$2');
+    }
+    
+    // Atualiza o valor do campo
+    event.target.value = value;
+}
+
+// Adiciona os event listeners para o campo de telefone
+phoneInput.addEventListener('input', maskPhone);
+phoneInput.addEventListener('keyup', maskPhone);
+
+form.addEventListener('submit', function(e) {
+    const submitButton = document.getElementById('submitButton');
+    const spinner = submitButton.querySelector('.loading-spinner');
+    const buttonText = submitButton.querySelector('span');
+    
+    // Validação adicional do email antes do envio
+    const email = emailInput.value;
+    if (!validateEmail(email)) {
+        e.preventDefault();
+        emailInput.setCustomValidity('Por favor, insira um email válido');
+        emailInput.reportValidity();
+        return;
+    }
+    
+    // Mostra loading
+    submitButton.disabled = true;
+    spinner.style.display = 'inline-block';
+    buttonText.textContent = 'Enviando...';
 });
 
