@@ -20,6 +20,7 @@ html, body {
     scroll-behavior: smooth;
     width: 100%;
     position: relative;
+    overflow-x: hidden;
 }
 
 .send-mail {
@@ -39,7 +40,8 @@ body {
     line-height: 1.5;
     color: var(--color-text);
     background-color: var(--color-background);
-    overflow: hidden;
+    overflow-x: hidden;
+    max-width: 100%;
 }
 
 /* Container */
@@ -474,6 +476,8 @@ h2 {
     grid-template-columns: 1fr 1fr;
     gap: 4rem;
     margin-top: 3rem;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 .contact-info {
@@ -701,6 +705,12 @@ h2 {
         align-items: center;
         justify-content: center;
         border-radius: 50%;
+    }
+
+    .contact-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+        width: 100%;
     }
 
     .contact-form {
