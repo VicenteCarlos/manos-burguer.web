@@ -20,7 +20,9 @@ html,
 body {
   scroll-behavior: smooth;
   width: 100%;
-  position: relative;
+  height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 body {
@@ -28,9 +30,8 @@ body {
   line-height: 1.5;
   color: var(--color-text);
   background-color: var(--color-background);
-  max-width: 100%;
-  min-height: 100vh;
   overflow-x: hidden;
+  overflow-y: visible;
 }
 
 .send-mail {
@@ -49,6 +50,7 @@ body {
   max-width: var(--container-width);
   margin: 0 auto;
   padding: 0 1rem;
+  height: auto;
 }
 
 /* Tipografia */
@@ -164,6 +166,7 @@ h2 {
   min-height: 100vh;
   display: flex;
   align-items: center;
+  width: 100%;
 }
 
 .hero .container {
@@ -204,6 +207,9 @@ h2 {
 
 /* Features Section */
 .features {
+  padding: 4rem 0;
+  width: 100%;
+  min-height: auto;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 2rem;
@@ -248,8 +254,10 @@ h2 {
 
 /* Process Section */
 .process {
+  padding: 4rem 0;
+  width: 100%;
+  min-height: auto;
   background-color: var(--color-background-alt);
-  padding: 6rem 0;
 }
 
 .steps {
@@ -274,7 +282,9 @@ h2 {
 
 /* Menu Section */
 .menu {
-  padding: 6rem 0;
+  padding: 4rem 0;
+  width: 100%;
+  min-height: auto;
 }
 
 .menu-stats {
@@ -340,8 +350,10 @@ h2 {
 
 /* Testimonials Section */
 .testimonials {
+  padding: 4rem 0;
+  width: 100%;
+  min-height: auto;
   background-color: var(--color-background-alt);
-  padding: 6rem 0;
 }
 
 .testimonials-grid {
@@ -401,7 +413,9 @@ h2 {
 
 /* Delivery Section */
 .delivery {
-  padding: 6rem 0;
+  padding: 4rem 0;
+  width: 100%;
+  min-height: auto;
   background-color: var(--color-background);
 }
 
@@ -469,7 +483,9 @@ h2 {
 
 /* Contact Section */
 .contact {
-  padding: 6rem 0;
+  padding: 4rem 0;
+  width: 100%;
+  min-height: auto;
   background-color: var(--color-background-alt);
 }
 
@@ -714,6 +730,7 @@ h2 {
   html,
   body {
     width: 100%;
+    height: auto;
     overflow-x: hidden;
   }
 
