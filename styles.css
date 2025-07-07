@@ -761,6 +761,11 @@ body.modal-open {
 }
 
 @media (max-width: 768px) {
+  html,
+  body {
+    overflow-x: hidden;
+  }
+
   body {
     overflow-x: hidden;
   }
@@ -807,6 +812,11 @@ body.modal-open {
   .testimonials-grid,
   .steps {
     grid-template-columns: 1fr;
+  }
+
+  html,
+  body {
+    overflow-x: hidden;
   }
 
   body {
