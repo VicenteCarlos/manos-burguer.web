@@ -43,11 +43,11 @@ const burgers = {
 };
 
 // Elementos do DOM
-const modal = document.getElementById('burgerModal');
+const modal = document.querySelector('.modal');
 const modalImage = modal.querySelector('.modal-image');
 const modalTitle = modal.querySelector('.modal-title');
 const modalIngredients = modal.querySelector('.modal-ingredients');
-const closeModal = modal.querySelector('.close-modal');
+const closeModalBtn = modal.querySelector('.close-modal');
 const verMaisBtns = document.querySelectorAll('.btn-ver-mais');
 
 // Funções
@@ -79,7 +79,7 @@ verMaisBtns.forEach(btn => {
     });
 });
 
-closeModal.addEventListener('click', fecharModal);
+closeModalBtn.addEventListener('click', fecharModal);
 
 modal.addEventListener('click', (e) => {
     if (e.target === modal) {
@@ -118,23 +118,3 @@ document.getElementById('contactForm').addEventListener('submit', function(e) {
   buttonText.textContent = 'Enviando...';
 });
 
-function openModal(burger) {
-  const modal = document.querySelector('.modal');
-  const modalTitle = modal.querySelector('h2');
-  const modalImage = modal.querySelector('img');
-  const modalDescription = modal.querySelector('p');
-
-  modalTitle.textContent = burger.title;
-  modalImage.src = burger.image;
-  modalImage.alt = burger.title;
-  modalDescription.textContent = burger.description;
-
-  modal.style.display = 'flex';
-  document.body.classList.add('modal-open'); // Adiciona a classe ao abrir
-}
-
-function closeModal() {
-  const modal = document.querySelector('.modal');
-  modal.style.display = 'none';
-  document.body.classList.remove('modal-open'); // Remove a classe ao fechar
-} 
