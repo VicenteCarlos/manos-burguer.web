@@ -39,7 +39,6 @@ body {
     line-height: 1.5;
     color: var(--color-text);
     background-color: var(--color-background);
-    overflow-x: hidden;
     max-width: 100%;
 }
 
