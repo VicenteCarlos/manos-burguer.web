@@ -104,4 +104,16 @@ document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             });
         }
     });
+});
+
+// Gerenciamento do Formulário
+document.getElementById('contactForm').addEventListener('submit', function(e) {
+  const submitButton = document.getElementById('submitButton');
+  const spinner = submitButton.querySelector('.loading-spinner');
+  const buttonText = submitButton.querySelector('span');
+  
+  // Mostra loading
+  submitButton.disabled = true;
+  spinner.style.display = 'inline-block';
+  buttonText.textContent = 'Enviando...';
 }); 

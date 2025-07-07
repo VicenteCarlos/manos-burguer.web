@@ -345,9 +345,14 @@
             <form
               class="contact-form"
               data-aos="fade-left"
-              action="https://formsubmit.co/manosburguer30@gmail.com"
+              action="https://formsubmit.co/soniamariadias2012@hotmail.com"
               method="POST"
+              id="contactForm"
             >
+              <input type="hidden" name="_next" value="https://manos-burguer-web.vercel.app">
+              <input type="hidden" name="_captcha" value="false">
+              <input type="hidden" name="_template" value="box">
+              <input type="hidden" name="_subject" value="Novo contato do site">
               <div class="form-group">
                 <label for="name">Nome</label>
                 <input
@@ -387,7 +392,11 @@
                   placeholder="Digite sua mensagem"
                 ></textarea>
               </div>
-              <button type="submit" class="btn primary">Enviar Mensagem</button>
+              <button type="submit" class="btn primary" id="submitButton">
+                <span>Enviar Mensagem</span>
+                <div class="loading-spinner" style="display: none;"></div>
+              </button>
+              <div id="formMessage" class="form-message"></div>
             </form>
           </div>
         </div>
