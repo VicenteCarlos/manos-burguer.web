@@ -23,6 +23,16 @@ body {
   position: relative;
 }
 
+body {
+  font-family: system-ui, -apple-system, sans-serif;
+  line-height: 1.5;
+  color: var(--color-text);
+  background-color: var(--color-background);
+  max-width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
 .send-mail {
   display: flex;
   align-items: center;
@@ -31,14 +41,6 @@ body {
 
 .send-mail button {
   margin-right: 1rem;
-}
-
-body {
-  font-family: system-ui, -apple-system, sans-serif;
-  line-height: 1.5;
-  color: var(--color-text);
-  background-color: var(--color-background);
-  max-width: 100%;
 }
 
 /* Container */
@@ -581,9 +583,7 @@ h2 {
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.9);
   z-index: 2000;
-  overflow: hidden;
-  width: 100vw;
-  height: 100vh;
+  overflow: auto;
 }
 
 .modal.active {
@@ -598,10 +598,8 @@ h2 {
   max-width: min(800px, 90vw);
   width: 100%;
   position: relative;
-  margin: auto;
+  margin: 2rem auto;
   animation: modalFadeIn 0.3s ease-out;
-  max-height: 90vh;
-  overflow: hidden;
 }
 
 .close-modal {
@@ -628,8 +626,6 @@ h2 {
   padding: 2rem;
   width: 100%;
   box-sizing: border-box;
-  overflow-y: auto;
-  max-height: calc(90vh - 4rem);
 }
 
 .modal-image {
@@ -670,20 +666,16 @@ h2 {
 /* Responsividade */
 @media (max-width: 768px) {
   .modal-content {
-    width: 100vw;
-    height: 100vh;
-    max-width: 100%;
-    max-height: 100vh;
+    width: 100%;
     margin: 0;
     border-radius: 0;
+    min-height: 100vh;
   }
 
   .modal-body {
     grid-template-columns: 1fr;
     padding: 1rem;
     gap: 1rem;
-    height: calc(100vh - 60px);
-    max-height: none;
   }
 
   .modal-image {
@@ -717,6 +709,47 @@ h2 {
   .contact-form {
     width: 100%;
     padding: 1.5rem;
+  }
+
+  html,
+  body {
+    width: 100%;
+    overflow-x: hidden;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .hero .container,
+  .delivery .container,
+  .contact-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .hero-image {
+    order: -1;
+  }
+
+  .steps {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 3rem;
+  }
+
+  .modal-body {
+    grid-template-columns: 1fr;
+  }
+
+  .modal-image {
+    border-radius: var(--border-radius) var(--border-radius) 0 0;
+  }
+
+  .delivery-image {
+    order: -1;
+  }
+
+  .contact-info {
+    grid-template-columns: 1fr;
   }
 }
 
@@ -757,52 +790,6 @@ body.modal-open {
   .menu-grid,
   .testimonials-grid {
     grid-template-columns: repeat(2, 1fr);
-  }
-}
-
-@media (max-width: 768px) {
-  html,
-  body {
-    overflow-x: hidden;
-  }
-
-  body {
-    overflow-x: hidden;
-  }
-
-  .nav {
-    display: none;
-  }
-
-  .hero .container,
-  .delivery .container,
-  .contact-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero-image {
-    order: -1;
-  }
-
-  .steps {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 3rem;
-  }
-
-  .modal-body {
-    grid-template-columns: 1fr;
-  }
-
-  .modal-image {
-    border-radius: var(--border-radius) var(--border-radius) 0 0;
-  }
-
-  .delivery-image {
-    order: -1;
-  }
-
-  .contact-info {
-    grid-template-columns: 1fr;
   }
 }
 
