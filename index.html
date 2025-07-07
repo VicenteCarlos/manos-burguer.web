@@ -347,22 +347,16 @@
             <form
               class="contact-form"
               data-aos="fade-left"
-              action="https://formsubmit.co/soniamariadias2012@hotmail.com"
+              action="https://formspree.io/f/xanjzgpz"
               method="POST"
               id="contactForm"
             >
               <input
                 type="hidden"
-                name="_next"
+                name="_redirect"
                 value="https://manos-burguer-web.vercel.app"
               />
-              <input type="hidden" name="_captcha" value="false" />
-              <input type="hidden" name="_template" value="box" />
-              <input
-                type="hidden"
-                name="_subject"
-                value="Novo contato do site"
-              />
+
               <div class="form-group">
                 <label for="name">Nome</label>
                 <input
@@ -373,6 +367,7 @@
                   placeholder="Seu nome completo"
                 />
               </div>
+
               <div class="form-group">
                 <label for="email">E-mail</label>
                 <input
@@ -383,6 +378,7 @@
                   placeholder="Seu melhor e-mail"
                 />
               </div>
+
               <div class="form-group">
                 <label for="phone">Telefone</label>
                 <input
@@ -393,6 +389,7 @@
                   placeholder="(XX) XXXXX-XXXX"
                 />
               </div>
+
               <div class="form-group">
                 <label for="message">Mensagem</label>
                 <textarea
@@ -402,6 +399,7 @@
                   placeholder="Digite sua mensagem"
                 ></textarea>
               </div>
+
               <div class="send-mail">
                 <button type="submit" class="btn primary" id="submitButton">
                   <span>Enviar Mensagem</span>
@@ -409,6 +407,7 @@
                 </button>
                 <span>Sua mensagem pode demorar alguns minutos, aguarde.</span>
               </div>
+
               <div id="formMessage" class="form-message"></div>
             </form>
           </div>
