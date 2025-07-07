@@ -22,6 +22,18 @@ html, body {
     position: relative;
 }
 
+.send-mail {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+.send-mail button {
+    margin-right: 1rem;
+}
+
+
 body {
     font-family: system-ui, -apple-system, sans-serif;
     line-height: 1.5;

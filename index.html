@@ -145,9 +145,7 @@
             <div class="step" data-aos="fade-up" data-aos-delay="600">
               <div class="step-icon">🔥</div>
               <h3>3. CHAPA</h3>
-              <p>
-                No ponto perfeito para garantir suculência e sabor
-              </p>
+              <p>No ponto perfeito para garantir suculência e sabor</p>
             </div>
             <div class="step" data-aos="fade-up" data-aos-delay="800">
               <div class="step-icon">🍽️</div>
@@ -320,7 +318,11 @@
               </li>
             </ul>
 
-            <a href="https://wa.me/5599985530545" target="_blank" class="btn whatsapp">
+            <a
+              href="https://wa.me/5599985530545"
+              target="_blank"
+              class="btn whatsapp"
+            >
               <span class="icon">📱</span>
               Pedir pelo WhatsApp
             </a>
@@ -349,10 +351,18 @@
               method="POST"
               id="contactForm"
             >
-              <input type="hidden" name="_next" value="https://manos-burguer-web.vercel.app">
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_template" value="box">
-              <input type="hidden" name="_subject" value="Novo contato do site">
+              <input
+                type="hidden"
+                name="_next"
+                value="https://manos-burguer-web.vercel.app"
+              />
+              <input type="hidden" name="_captcha" value="false" />
+              <input type="hidden" name="_template" value="box" />
+              <input
+                type="hidden"
+                name="_subject"
+                value="Novo contato do site"
+              />
               <div class="form-group">
                 <label for="name">Nome</label>
                 <input
@@ -392,10 +402,13 @@
                   placeholder="Digite sua mensagem"
                 ></textarea>
               </div>
-              <button type="submit" class="btn primary" id="submitButton">
-                <span>Enviar Mensagem</span>
-                <div class="loading-spinner" style="display: none;"></div>
-              </button>
+              <div class="send-mail">
+                <button type="submit" class="btn primary" id="submitButton">
+                  <span>Enviar Mensagem</span>
+                  <div class="loading-spinner" style="display: none"></div>
+                </button>
+                <span>Sua mensagem pode demorar alguns minutos, aguarde.</span>
+              </div>
               <div id="formMessage" class="form-message"></div>
             </form>
           </div>
