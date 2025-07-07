@@ -263,6 +263,7 @@ h2 {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
     gap: 2rem;
+    overflow-x: scroll;
     text-align: center;
     margin-bottom: 4rem;
 }
